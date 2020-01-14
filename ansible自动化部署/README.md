@@ -61,4 +61,18 @@ ansible-playbook -i hosts multi-master-deploy.yml -uroot -k
 ansible-playbook -i hosts single-master-deploy.yml -uroot -k --tags addons
 ```
 
-### 
+### 最后啰嗦一会
+group_vars/all.yaml说明：
+  定义全局变量文件，其中证书授权IP地址尽量预留一点为新增node节点做准备，
+  部署HA集群时，注意网卡名称
+
+
+
+
+
+
+
+
+
+
+
