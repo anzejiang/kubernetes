@@ -1,17 +1,21 @@
 # Kubernetes v1.16 高可用集群自动部署（离线版）
->### 确保所有节点系统时间一致
+>### 确保所有节点系统时间一致（包括ansible节点）
 ### 1、下载所需文件
 
 下载Ansible部署文件：
 
 ```
-git clone https://github.com/lizhenliang/ansible-install-k8s
-cd ansible-install-k8s
+git clone https://github.com/anzejiang/kubernetes.git
+cd ansible自动化部署
 ```
 
 下载软件包并解压：
 
-云盘地址：https://pan.baidu.com/s/1lTXolmlcCJbei9HY2BJRPQ
+云盘地址：链接：https://pan.baidu.com/s/1H5ClTXPkYAyzFPAqGdSFqA 
+提取码：t96b
+
+解压至/root目录下
+
 ```
 tar zxf binary_pkg.tar.gz
 ```
@@ -35,9 +39,10 @@ cert_hosts:
 ## 3、一键部署
 ### 架构图
 单Master架构
-![avatar](https://github.com/lizhenliang/ansible-install-k8s/blob/master/single-master.jpg)
+![avatar](https://github.com/anzejiang/kubernetes/blob/master/images/single-master.jpg)
 多Master架构
-![avatar](https://github.com/lizhenliang/ansible-install-k8s/blob/master/multi-master.jpg)
+![avatar](https://github.com/anzejiang/kubernetes/blob/master/images/multi-master.jpg)
+
 ### 部署命令
 单Master版：
 ```
