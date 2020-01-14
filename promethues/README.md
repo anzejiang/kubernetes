@@ -10,9 +10,6 @@ https://github.com/coreos/kube-prometheus
 
 - kubernetes集群1.16版本，纯二进制版本打造，参考[k8s1.16集群部署]([https://github.com/anzejiang/kubernetes/edit/master/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/README.md](https://github.com/anzejiang/kubernetes/edit/master/ansible自动化部署/README.md))
 
-- coreos/kube-prometheus从coreos/prometheus-operator独立出来了，后续entire monitoring stack只能去coreos/kube-prometheus
-
-- 目前在该环境下部署还没有遇到坑
 
 
 ### 监控原理
@@ -42,7 +39,7 @@ Prometheus读取Metrcs，读取etcd或者api的都行
 **2.查看原配置文件**
 
 ```
-[root@elasticsearch01 yaml]# cd kubernetes/promethues/
+[root@elasticsearch01 opt]# cd kubernetes/promethues/
 [root@elasticsearch01 promethues]# ll
 总用量 56
 drwxr-xr-x 2 root root  4096 1月  13 16:03 adapter
