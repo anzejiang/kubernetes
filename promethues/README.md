@@ -46,7 +46,7 @@ drwxr-xr-x 2 root root  4096 1月  13 16:03 adapter
 drwxr-xr-x 2 root root  4096 1月  13 16:05 alertmanager
 drwxr-xr-x 2 root root  4096 1月  13 18:38 grafana
 drwxr-xr-x 2 root root  4096 1月  14 16:13 ingress-yaml
--rw-r--r-- 1 root root 17010 1月  14 16:22 kubernetes集群全栈监控报警方案kube-prometheus.md
+-rw-r--r-- 1 root root 17010 1月  14 16:22 README.md
 drwxr-xr-x 2 root root  4096 1月  13 16:05 kube-state-metrics
 drwxr-xr-x 2 root root  4096 1月  13 16:05 node-exporter
 drwxr-xr-x 2 root root  4096 1月  13 16:03 operator
@@ -54,26 +54,7 @@ drwxr-xr-x 2 root root  4096 1月  13 16:05 prometheus
 drwxr-xr-x 2 root root  4096 1月  13 16:05 serviceMonitor
 ```
 
-
-**3.新建目录重新梳理下**
-
-```
-[root@elasticsearch01 promethues]# ls -lh
-总用量 56K
-drwxr-xr-x 2 root root 4.0K 1月  13 16:03 adapter
-drwxr-xr-x 2 root root 4.0K 1月  13 16:05 alertmanager
-drwxr-xr-x 2 root root 4.0K 1月  13 18:38 grafana
-drwxr-xr-x 2 root root 4.0K 1月  14 16:13 ingress-yaml
--rw-r--r-- 1 root root  17K 1月  14 16:22 kubernetes集群全栈监控报警方案kube-prometheus.md
-drwxr-xr-x 2 root root 4.0K 1月  13 16:05 kube-state-metrics
-drwxr-xr-x 2 root root 4.0K 1月  13 16:05 node-exporter
-drwxr-xr-x 2 root root 4.0K 1月  13 16:03 operator
-drwxr-xr-x 2 root root 4.0K 1月  13 16:05 prometheus
-drwxr-xr-x 2 root root 4.0K 1月  13 16:05 serviceMonitor
-
-```
-
-**4.部署前注意问题**
+**3.部署前注意问题**
 a.镜像问题
 其中k8s.gcr.io/addon-resizer:1.8.4镜像下载不了，需要借助阿里云中转下，其他镜像默认都能下载，如遇到不能下载的也需要中转下再tag到自己私有镜像库
 ```
@@ -99,7 +80,7 @@ nodeport方式需在service配置文件，如grafana/grafana-service.yaml 添加
 ingress方式也需要配置文件，ingress配置文件见最后访问配置文件，ingress部署参考[k8s集群部署ingress](https://github.com/minminmsn/k8s1.13/blob/master/ingress-nginx/kubernetes1.13.1%E9%83%A8%E7%BD%B2ingress-nginx%E5%B9%B6%E9%85%8D%E7%BD%AEhttps%E8%BD%AC%E5%8F%91dashboard.md)
 
 
-**5.应用部署**
+**4.应用部署**
 ```
 [root@elasticsearch01 promethues]# kubectl apply -f .
 namespace/monitoring created
@@ -197,7 +178,7 @@ servicemonitor.monitoring.coreos.com/kubelet created
 ```
 
 
-**6.检查验证**
+**5.检查验证**
 ```
 [root@elasticsearch01 promethues]# k -n monitoring get all
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -241,7 +222,7 @@ statefulset.apps/prometheus-k8s      2/2     23h
 ```
 
 
-**7.ingress配置**
+**6.ingress配置**
 ```
 [root@elasticsearch01 promethues]# cat ingress-yaml/ingress-monitor.yaml 
 apiVersion: extensions/v1beta1
