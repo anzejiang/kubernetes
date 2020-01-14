@@ -66,13 +66,4 @@ group_vars/all.yaml说明：
   定义全局变量文件，其中证书授权IP地址尽量预留一点为新增node节点做准备，
   部署HA集群时，注意网卡名称
 
-
-
-
-
-
-
-
-
-
-
+另外，add-node.yml是新增node节点所需plabook文件
