@@ -10,7 +10,7 @@
 
 # metrics-server部署
 
-#promethues部署	
+# promethues部署	
 
 
 ```
