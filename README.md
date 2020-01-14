@@ -12,6 +12,9 @@
 
 # promethues部署	
 
+# promethues中的metrics和metrics项目的两种部署metrics有冲突，promethues依赖与peomethues中的metrics获取集群数据
+
+# 根据metrics目录部署metrics，promethues存在获取不到数据的情况
 
 ```
 
