@@ -6,7 +6,7 @@
 
 # HA部署
 
-# ansible自动化部署
+# [ansible自动化部署](https://github.com/anzejiang/kubernetes/tree/master/ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2)
 
 # metrics-server部署
 
